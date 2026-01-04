@@ -12,7 +12,7 @@ export const ReviewResponseSchema = z.object({
   issues: z.array(ReviewIssueSchema),
   improvements: z.array(z.string()),
   optimizedCode: z.string(),
-  explaination: z.string(),
+  explanation: z.string(),
 });
 
 export type ReviewResponse = z.infer<typeof ReviewResponseSchema>;
