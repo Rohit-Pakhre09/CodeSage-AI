@@ -1,19 +1,40 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
-
-const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash",
-});
-
 export async function getAIResponse(prompt: string): Promise<string> {
-  try {
-    const result = await model.generateContent(prompt);
-    const response = result.response;
+  const apiKey = process.env.GEMINI_API_KEY;
 
-    return response.text();
+  if (!apiKey) {
+    throw new Error("GEMINI_API_KEY is missing");
+  }
+
+  const url =
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=" +
+    apiKey;
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [{ text: prompt }],
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      console.error("Gemini HTTP Error:", errText);
+      throw new Error("Gemini API request failed");
+    }
+
+    const data = await response.json();
+
+    return data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
   } catch (error) {
-    console.error("Gemini AI Error: ", error);
-    throw new Error("Failed to get AI response from gemini.");
+    console.error("Gemini AI Error:", error);
+    throw new Error("Failed to get AI response from Gemini");
   }
 }

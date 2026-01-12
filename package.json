@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "list-models": "tsc && node src/lib/ai/listModels.js"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "@monaco-editor/react": "^4.7.0",
     "axios": "^1.13.2",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
