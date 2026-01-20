@@ -35,6 +35,6 @@ export async function getAIResponse(prompt: string): Promise<string> {
     return data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
   } catch (error) {
     console.error("Gemini AI Error:", error);
-    throw new Error("Failed to get AI response from Gemini");
+    throw new Error("Failed to get AI response from Gemini: ");
   }
 }
