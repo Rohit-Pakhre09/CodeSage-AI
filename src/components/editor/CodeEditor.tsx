@@ -7,6 +7,7 @@ type CodeEditorPropes = {
   onChange: (value: string) => void;
 };
 
+// Editor showing code
 export default function CodeEditor({ value, onChange }: CodeEditorPropes) {
   return (
     <Editor
