@@ -233,4 +233,4 @@ public/
 
 ## License
 
-This project is available to learn from, extend, and adapt in your own workflow.
+This project is licensed under the [MIT License](./LICENSE).
