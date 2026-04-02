@@ -38,7 +38,7 @@ export default function ReviewWorkspace({
 
   return (
     <section className="min-w-0 flex flex-col rounded-[28px] border border-white/70 bg-white/85 p-5 shadow-[0_24px_80px_-32px_rgba(15,23,42,0.3)] backdrop-blur sm:p-6">
-      <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h2 className="text-xl font-semibold text-slate-950">Workspace</h2>
           <p className="mt-1 text-md text-slate-500">
@@ -46,8 +46,8 @@ export default function ReviewWorkspace({
           </p>
         </div>
 
-        <div className="grid w-full items-start gap-3 md:w-auto md:grid-cols-2">
-          <label className="flex min-w-0 flex-col gap-1.5 text-sm font-medium text-slate-700 md:min-w-[220px]">
+        <div className="grid w-full items-start gap-3 sm:grid-cols-2 lg:w-auto">
+          <label className="flex min-w-0 flex-col gap-1.5 text-sm font-medium text-slate-700 lg:min-w-[220px]">
             Language
             <div className="relative">
               <select
@@ -61,16 +61,16 @@ export default function ReviewWorkspace({
                   </option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-slate-400">
-                ▼
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[11px] leading-none text-slate-400">
+                v
               </span>
             </div>
-            <span className="line-clamp-1 text-[11px] font-normal leading-4 text-slate-500">
+            <span className="text-[11px] font-normal leading-4 text-slate-500">
               {selectedLanguage.description}
             </span>
           </label>
 
-          <label className="flex min-w-0 flex-col gap-1.5 text-sm font-medium text-slate-700 md:min-w-[220px]">
+          <label className="flex min-w-0 flex-col gap-1.5 text-sm font-medium text-slate-700 lg:min-w-[220px]">
             Level
             <div className="relative">
               <select
@@ -84,11 +84,11 @@ export default function ReviewWorkspace({
                   </option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-slate-400">
-                ▼
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[11px] leading-none text-slate-400">
+                v
               </span>
             </div>
-            <span className="line-clamp-1 text-[11px] font-normal leading-4 text-slate-500">
+            <span className="text-[11px] font-normal leading-4 text-slate-500">
               {selectedLevel.description}
             </span>
           </label>

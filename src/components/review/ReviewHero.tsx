@@ -19,7 +19,7 @@ export default function ReviewHero({ loading }: ReviewHeroProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:w-auto">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:w-auto">
           <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
             <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
               Provider
