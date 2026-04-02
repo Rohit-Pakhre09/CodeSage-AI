@@ -20,6 +20,7 @@
 
 <p align="center">
   <a href="#overview">Overview</a> |
+  <a href="#sneak-peek">Sneak Peek</a> |
   <a href="#why-it-feels-different">Why It Feels Different</a> |
   <a href="#experience-flow">Experience Flow</a> |
   <a href="#quick-start">Quick Start</a> |
@@ -41,6 +42,14 @@ Drop in a snippet, choose your language, pick the explanation level, and CodeSag
 - a clear explanation matched to the chosen level
 
 > The goal is simple: make code review feel less like a wall of text and more like a guided workspace.
+
+## Sneak Peek
+
+<p align="center">
+  <a href="https://codesage-ai-review.vercel.app" target="_blank" rel="noopener noreferrer">
+    <img src="./public/CodeSage-AI.png" alt="CodeSage AI intro page preview" />
+  </a>
+</p>
 
 ## Why It Feels Different
 
@@ -203,6 +212,7 @@ src/
     validators/
       reviewResponse.schema.ts
 public/
+  CodeSage-AI.png
   codesage-mark.svg
 ```
 
